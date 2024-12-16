@@ -1,0 +1,20 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/santi/osr_ws/install/osr_control/lib/python3.10/site-packages",
+        "/home/santi/osr_ws/install/osr_interfaces/local/lib/python3.10/dist-packages",
+        "/home/santi/robotino4-ros2/install/robotino_rest_node/lib/python3.10/site-packages",
+        "/home/santi/robotino4-ros2/install/path_planner_server/lib/python3.10/site-packages",
+        "/home/santi/robotino4-ros2/install/localization_server/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/santi/osr_ws/install/osr_control/lib/python3.10/site-packages",
+        "/home/santi/osr_ws/install/osr_interfaces/local/lib/python3.10/dist-packages",
+        "/home/santi/robotino4-ros2/install/robotino_rest_node/lib/python3.10/site-packages",
+        "/home/santi/robotino4-ros2/install/path_planner_server/lib/python3.10/site-packages",
+        "/home/santi/robotino4-ros2/install/localization_server/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}

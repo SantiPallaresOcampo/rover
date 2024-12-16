@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="my_robot">
+
+  <!-- Definición del enlace base -->
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="0 0 0"/> <!-- Tamaño del enlace base -->
+      </geometry>
+      <material name="grey">
+        <color rgba="0.5 0.5 0.5 1"/>
+      </material>
+    </visual>
+  </link>
+
+  <!-- Definición del cubo simple -->
+  <link name="cube_link">
+    <visual>
+      <geometry>
+        <box size="0.5 0.5 0.25"/> 
+      </geometry>
+    </visual>
+  </link>
+
+  <!-- Definición de la articulación del cubo -->
+  <joint name="cube_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="cube_link"/>
+    <origin xyz="0.1 0 0.2" rpy="0 0 0"/> 
+  </joint>
+
+  <!-- Definicion de cilindro 1-->
+  <link name="cylinder_link">
+    <visual>
+      <geometry>
+          <cylinder radius="0.0" length="0.0"/>
+      </geometry>
+      <material name="blue">
+        <color rgba="0 0 1 1"/>
+      </material>
+    </visual>
+  </link>
+
+  <!-- Articulación para conectar cylinder_link a base_link -->
+  <joint name="cylinder_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="cylinder_link"/>
+    <origin xyz="0 0 0.1" rpy="0 0 0"/>
+  </joint>
+
+  <!-- Definición de la articulación de la rueda derecha -->
+  <joint name="right_wheel_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="right_wheel_link"/>
+    <origin xyz="0 0.275 0.1" rpy="-${pi/2} 0 0"/>
+  </joint>
+
+  <!-- Definición de la rueda derecha -->
+  <link name="right_wheel_link">
+    <visual>
+      <geometry>
+          <cylinder radius="0.1" length="0.05"/>
+      </geometry>
+      <material name="blue">
+        <color rgba="0 0 1 1"/>
+      </material>
+    </visual>
+  </link>
+
+  <!-- Definición de la articulación de la rueda izquierda -->
+  <joint name="left_wheel_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="left_wheel_link"/>
+    <origin xyz="0 -0.275 0.1" rpy="${-pi/2} 0 0"/>
+  </joint>
+
+  <!-- Definición de la rueda izquierda -->
+  <link name="left_wheel_link">
+    <visual>
+      <geometry>
+          <cylinder radius="0.1" length="0.05"/>
+      </geometry>
+      <material name="blue">
+        <color rgba="0 0 1 1"/>
+      </material>
+    </visual>
+  </link>
+
+
+  <!-- Definición de la esfera -->
+  <link name="sphere_link">
+    <visual>
+      <geometry>
+        <sphere radius="0.1"/>
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1"/>
+      </material>
+    </visual>
+  </link>
+
+  <!-- Articulación para conectar sphere_link a base_link -->
+  <joint name="sphere_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="sphere_link"/>
+    <origin xyz="0.25 0 0.1" rpy="0 0 0"/>
+  </joint>
+</robot>
