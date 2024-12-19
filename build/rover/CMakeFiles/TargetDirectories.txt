@@ -1,0 +1,9 @@
+/home/santi/dev_ws/src/rover/build/rover/CMakeFiles/uninstall.dir
+/home/santi/dev_ws/src/rover/build/rover/CMakeFiles/rover_uninstall.dir
+/home/santi/dev_ws/src/rover/build/rover/CMakeFiles/test.dir
+/home/santi/dev_ws/src/rover/build/rover/CMakeFiles/edit_cache.dir
+/home/santi/dev_ws/src/rover/build/rover/CMakeFiles/rebuild_cache.dir
+/home/santi/dev_ws/src/rover/build/rover/CMakeFiles/list_install_components.dir
+/home/santi/dev_ws/src/rover/build/rover/CMakeFiles/install.dir
+/home/santi/dev_ws/src/rover/build/rover/CMakeFiles/install/local.dir
+/home/santi/dev_ws/src/rover/build/rover/CMakeFiles/install/strip.dir

@@ -1,0 +1,1 @@
+/home/santi/dev_ws/src/rover/build/rover/ament_cmake_environment_hooks/local_setup.zsh

@@ -1,0 +1,4605 @@
+<sdf version='1.7'>
+  <world name='default'>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <physics type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <audio>
+      <device>default</device>
+    </audio>
+    <wind/>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <model name='grey_wall'>
+      <static>1</static>
+      <link name='link'>
+        <pose>0 0 1.4 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>7.5 0.2 2.8</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>7.5 0.2 2.8</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://grey_wall/materials/scripts</uri>
+              <uri>model://grey_wall/materials/textures</uri>
+              <name>vrc/grey_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-0.453086 -1.18781 0 0 -0 0</pose>
+    </model>
+    <model name='grey_wall_0'>
+      <static>1</static>
+      <link name='link'>
+        <pose>0 0 1.4 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>7.5 0.2 2.8</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>7.5 0.2 2.8</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://grey_wall/materials/scripts</uri>
+              <uri>model://grey_wall/materials/textures</uri>
+              <name>vrc/grey_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>-2.56414 0.751311 0 0 -0 0</pose>
+    </model>
+    <model name='grey_wall_1'>
+      <static>1</static>
+      <link name='link'>
+        <pose>0 0 1.4 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>7.5 0.2 2.8</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>7.5 0.2 2.8</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://grey_wall/materials/scripts</uri>
+              <uri>model://grey_wall/materials/textures</uri>
+              <name>vrc/grey_wall</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>2.05068 3.35336 0 0 -0 0</pose>
+    </model>
+    <model name='brick_box_3x1x3'>
+      <static>1</static>
+      <link name='chassis'>
+        <pose>0 0 1.5 0 -0 0</pose>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>3 1 3</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://brick_box_3x1x3/meshes/simple_box.dae</uri>
+              <scale>3 1 3</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://brick_box_3x1x3/materials/scripts</uri>
+              <uri>model://brick_box_3x1x3/materials/textures</uri>
+              <name>BrickBox/Diffuse</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>3.59918 -0.149597 0 0 -0 0</pose>
+    </model>
+    <model name='number1'>
+      <pose>3.14801 1.63867 0.4 0 -0 0</pose>
+      <static>1</static>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://number1/meshes/number.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://number1/materials/scripts</uri>
+              <uri>model://number1/materials/textures</uri>
+              <name>Number/One</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <model name='wood_cube_10cm'>
+      <link name='link'>
+        <pose>0 0 0.05 0 -0 0</pose>
+        <inertial>
+          <mass>0.5167</mass>
+          <inertia>
+            <ixx>0.000861167</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.000861167</iyy>
+            <iyz>0</iyz>
+            <izz>0.000861167</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <poissons_ratio>0.347</poissons_ratio>
+              <elastic_modulus>8.8e+09</elastic_modulus>
+              <ode>
+                <kp>100000</kp>
+                <kd>100</kd>
+                <max_vel>100</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+            <friction>
+              <torsional>
+                <coefficient>1</coefficient>
+                <use_patch_radius>0</use_patch_radius>
+                <surface_radius>0.01</surface_radius>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>4.66349 1.086 0 0 -0 0</pose>
+    </model>
+    <model name='wood_cube_10cm_clone'>
+      <link name='link'>
+        <pose>0 0 0.05 0 -0 0</pose>
+        <inertial>
+          <mass>0.5167</mass>
+          <inertia>
+            <ixx>0.000861167</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.000861167</iyy>
+            <iyz>0</iyz>
+            <izz>0.000861167</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <poissons_ratio>0.347</poissons_ratio>
+              <elastic_modulus>8.8e+09</elastic_modulus>
+              <ode>
+                <kp>100000</kp>
+                <kd>100</kd>
+                <max_vel>100</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+            <friction>
+              <torsional>
+                <coefficient>1</coefficient>
+                <use_patch_radius>0</use_patch_radius>
+                <surface_radius>0.01</surface_radius>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>4.57132 1.23871 -0.001013 0 -0 0</pose>
+    </model>
+    <model name='wood_cube_10cm_clone_0'>
+      <link name='link'>
+        <pose>0 0 0.05 0 -0 0</pose>
+        <inertial>
+          <mass>0.5167</mass>
+          <inertia>
+            <ixx>0.000861167</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.000861167</iyy>
+            <iyz>0</iyz>
+            <izz>0.000861167</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <poissons_ratio>0.347</poissons_ratio>
+              <elastic_modulus>8.8e+09</elastic_modulus>
+              <ode>
+                <kp>100000</kp>
+                <kd>100</kd>
+                <max_vel>100</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+            <friction>
+              <torsional>
+                <coefficient>1</coefficient>
+                <use_patch_radius>0</use_patch_radius>
+                <surface_radius>0.01</surface_radius>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>4.53901 1.10562 -0.001013 0 -0 0</pose>
+    </model>
+    <model name='wood_cube_10cm_clone_1'>
+      <link name='link'>
+        <pose>0 0 0.05 0 -0 0</pose>
+        <inertial>
+          <mass>0.5167</mass>
+          <inertia>
+            <ixx>0.000861167</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.000861167</iyy>
+            <iyz>0</iyz>
+            <izz>0.000861167</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <poissons_ratio>0.347</poissons_ratio>
+              <elastic_modulus>8.8e+09</elastic_modulus>
+              <ode>
+                <kp>100000</kp>
+                <kd>100</kd>
+                <max_vel>100</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+            <friction>
+              <torsional>
+                <coefficient>1</coefficient>
+                <use_patch_radius>0</use_patch_radius>
+                <surface_radius>0.01</surface_radius>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>4.45876 1.24403 -0.001013 0 -0 0</pose>
+    </model>
+    <model name='wood_cube_10cm_clone_2'>
+      <link name='link'>
+        <pose>0 0 0.05 0 -0 0</pose>
+        <inertial>
+          <mass>0.5167</mass>
+          <inertia>
+            <ixx>0.000861167</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.000861167</iyy>
+            <iyz>0</iyz>
+            <izz>0.000861167</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <poissons_ratio>0.347</poissons_ratio>
+              <elastic_modulus>8.8e+09</elastic_modulus>
+              <ode>
+                <kp>100000</kp>
+                <kd>100</kd>
+                <max_vel>100</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+            <friction>
+              <torsional>
+                <coefficient>1</coefficient>
+                <use_patch_radius>0</use_patch_radius>
+                <surface_radius>0.01</surface_radius>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>4.68595 1.25233 -0.001013 0 -0 0</pose>
+    </model>
+    <model name='wood_cube_10cm_clone_3'>
+      <link name='link'>
+        <pose>0 0 0.05 0 -0 0</pose>
+        <inertial>
+          <mass>0.5167</mass>
+          <inertia>
+            <ixx>0.000861167</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.000861167</iyy>
+            <iyz>0</iyz>
+            <izz>0.000861167</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <poissons_ratio>0.347</poissons_ratio>
+              <elastic_modulus>8.8e+09</elastic_modulus>
+              <ode>
+                <kp>100000</kp>
+                <kd>100</kd>
+                <max_vel>100</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+            <friction>
+              <torsional>
+                <coefficient>1</coefficient>
+                <use_patch_radius>0</use_patch_radius>
+                <surface_radius>0.01</surface_radius>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>4.57936 1.41548 -0.001013 0 -0 0</pose>
+    </model>
+    <model name='wood_cube_10cm_clone_4'>
+      <link name='link'>
+        <pose>0 0 0.05 0 -0 0</pose>
+        <inertial>
+          <mass>0.5167</mass>
+          <inertia>
+            <ixx>0.000861167</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.000861167</iyy>
+            <iyz>0</iyz>
+            <izz>0.000861167</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <poissons_ratio>0.347</poissons_ratio>
+              <elastic_modulus>8.8e+09</elastic_modulus>
+              <ode>
+                <kp>100000</kp>
+                <kd>100</kd>
+                <max_vel>100</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+            <friction>
+              <torsional>
+                <coefficient>1</coefficient>
+                <use_patch_radius>0</use_patch_radius>
+                <surface_radius>0.01</surface_radius>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>4.46122 1.47409 -0.001013 0 -0 0</pose>
+    </model>
+    <model name='wood_cube_10cm_clone_5'>
+      <link name='link'>
+        <pose>0 0 0.05 0 -0 0</pose>
+        <inertial>
+          <mass>0.5167</mass>
+          <inertia>
+            <ixx>0.000861167</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.000861167</iyy>
+            <iyz>0</iyz>
+            <izz>0.000861167</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <poissons_ratio>0.347</poissons_ratio>
+              <elastic_modulus>8.8e+09</elastic_modulus>
+              <ode>
+                <kp>100000</kp>
+                <kd>100</kd>
+                <max_vel>100</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+            <friction>
+              <torsional>
+                <coefficient>1</coefficient>
+                <use_patch_radius>0</use_patch_radius>
+                <surface_radius>0.01</surface_radius>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>4.40517 1.36843 -0.001013 0 -0 0</pose>
+    </model>
+    <model name='wood_cube_10cm_clone_6'>
+      <link name='link'>
+        <pose>0 0 0.05 0 -0 0</pose>
+        <inertial>
+          <mass>0.5167</mass>
+          <inertia>
+            <ixx>0.000861167</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.000861167</iyy>
+            <iyz>0</iyz>
+            <izz>0.000861167</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <poissons_ratio>0.347</poissons_ratio>
+              <elastic_modulus>8.8e+09</elastic_modulus>
+              <ode>
+                <kp>100000</kp>
+                <kd>100</kd>
+                <max_vel>100</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+            <friction>
+              <torsional>
+                <coefficient>1</coefficient>
+                <use_patch_radius>0</use_patch_radius>
+                <surface_radius>0.01</surface_radius>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>4.32843 1.2667 -0.001013 0 -0 0</pose>
+    </model>
+    <model name='wood_cube_10cm_clone_7'>
+      <link name='link'>
+        <pose>0 0 0.05 0 -0 0</pose>
+        <inertial>
+          <mass>0.5167</mass>
+          <inertia>
+            <ixx>0.000861167</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.000861167</iyy>
+            <iyz>0</iyz>
+            <izz>0.000861167</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <poissons_ratio>0.347</poissons_ratio>
+              <elastic_modulus>8.8e+09</elastic_modulus>
+              <ode>
+                <kp>100000</kp>
+                <kd>100</kd>
+                <max_vel>100</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+            <friction>
+              <torsional>
+                <coefficient>1</coefficient>
+                <use_patch_radius>0</use_patch_radius>
+                <surface_radius>0.01</surface_radius>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>4.32146 1.20626 -0.001013 0 -0 0</pose>
+    </model>
+    <model name='wood_cube_10cm_clone_8'>
+      <link name='link'>
+        <pose>0 0 0.05 0 -0 0</pose>
+        <inertial>
+          <mass>0.5167</mass>
+          <inertia>
+            <ixx>0.000861167</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.000861167</iyy>
+            <iyz>0</iyz>
+            <izz>0.000861167</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <poissons_ratio>0.347</poissons_ratio>
+              <elastic_modulus>8.8e+09</elastic_modulus>
+              <ode>
+                <kp>100000</kp>
+                <kd>100</kd>
+                <max_vel>100</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+            <friction>
+              <torsional>
+                <coefficient>1</coefficient>
+                <use_patch_radius>0</use_patch_radius>
+                <surface_radius>0.01</surface_radius>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>4.39656 1.04493 -0.001013 0 -0 0</pose>
+    </model>
+    <model name='wood_cube_10cm_clone_9'>
+      <link name='link'>
+        <pose>0 0 0.05 0 -0 0</pose>
+        <inertial>
+          <mass>0.5167</mass>
+          <inertia>
+            <ixx>0.000861167</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.000861167</iyy>
+            <iyz>0</iyz>
+            <izz>0.000861167</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <poissons_ratio>0.347</poissons_ratio>
+              <elastic_modulus>8.8e+09</elastic_modulus>
+              <ode>
+                <kp>100000</kp>
+                <kd>100</kd>
+                <max_vel>100</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+            <friction>
+              <torsional>
+                <coefficient>1</coefficient>
+                <use_patch_radius>0</use_patch_radius>
+                <surface_radius>0.01</surface_radius>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>4.45945 1.24422 0.185576 0 -0 0</pose>
+    </model>
+    <model name='wood_cube_10cm_clone_10'>
+      <link name='link'>
+        <pose>0 0 0.05 0 -0 0</pose>
+        <inertial>
+          <mass>0.5167</mass>
+          <inertia>
+            <ixx>0.000861167</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.000861167</iyy>
+            <iyz>0</iyz>
+            <izz>0.000861167</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <poissons_ratio>0.347</poissons_ratio>
+              <elastic_modulus>8.8e+09</elastic_modulus>
+              <ode>
+                <kp>100000</kp>
+                <kd>100</kd>
+                <max_vel>100</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+            <friction>
+              <torsional>
+                <coefficient>1</coefficient>
+                <use_patch_radius>0</use_patch_radius>
+                <surface_radius>0.01</surface_radius>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>4.563 1.40158 0.185576 0 -0 0</pose>
+    </model>
+    <model name='wood_cube_10cm_clone_11'>
+      <link name='link'>
+        <pose>0 0 0.05 0 -0 0</pose>
+        <inertial>
+          <mass>0.5167</mass>
+          <inertia>
+            <ixx>0.000861167</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.000861167</iyy>
+            <iyz>0</iyz>
+            <izz>0.000861167</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <collision name='collision'>
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <poissons_ratio>0.347</poissons_ratio>
+              <elastic_modulus>8.8e+09</elastic_modulus>
+              <ode>
+                <kp>100000</kp>
+                <kd>100</kd>
+                <max_vel>100</max_vel>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+            <friction>
+              <torsional>
+                <coefficient>1</coefficient>
+                <use_patch_radius>0</use_patch_radius>
+                <surface_radius>0.01</surface_radius>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Wood</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>4.68288 1.31074 0.185576 0 -0 0</pose>
+    </model>
+    <model name='rc_cessna'>
+      <pose>3.61337 2.21892 0.246 0 -0 0</pose>
+      <link name='base_link'>
+        <pose>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>1.5</mass>
+          <inertia>
+            <ixx>0.197563</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.145893</iyy>
+            <iyz>0</iyz>
+            <izz>0.1477</izz>
+          </inertia>
+        </inertial>
+        <collision name='fuselodge_collision'>
+          <pose>-0.14 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.65 0.08 0.1</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <max_vel>10</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='wings_collision'>
+          <pose>-0.01 0 0.07 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 1 0.01</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <max_vel>10</max_vel>
+                <min_depth>0.01</min_depth>
+              </ode>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='base_link_visual'>
+          <pose>0.07 0 -0.08 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.1 0.1 0.1</scale>
+              <uri>https://fuel.ignitionrobotics.org/1.0/px4/models/rc_cessna/1/files/meshes/body.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.175 0.175 0.175 1</ambient>
+            <diffuse>0.175 0.175 0.175 1</diffuse>
+          </material>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <sensor name='imu_sensor' type='imu'>
+          <always_on>1</always_on>
+          <update_rate>250</update_rate>
+          <imu>
+            <angular_velocity>
+              <x>
+                <noise type='gaussian'>
+                  <mean>0</mean>
+                  <stddev>0.0003394</stddev>
+                  <dynamic_bias_stddev>3.8785e-05</dynamic_bias_stddev>
+                  <dynamic_bias_correlation_time>1000</dynamic_bias_correlation_time>
+                </noise>
+              </x>
+              <y>
+                <noise type='gaussian'>
+                  <mean>0</mean>
+                  <stddev>0.0003394</stddev>
+                  <dynamic_bias_stddev>3.8785e-05</dynamic_bias_stddev>
+                  <dynamic_bias_correlation_time>1000</dynamic_bias_correlation_time>
+                </noise>
+              </y>
+              <z>
+                <noise type='gaussian'>
+                  <mean>0</mean>
+                  <stddev>0.0003394</stddev>
+                  <dynamic_bias_stddev>3.8785e-05</dynamic_bias_stddev>
+                  <dynamic_bias_correlation_time>1000</dynamic_bias_correlation_time>
+                </noise>
+              </z>
+            </angular_velocity>
+            <linear_acceleration>
+              <x>
+                <noise type='gaussian'>
+                  <mean>0</mean>
+                  <stddev>0.004</stddev>
+                  <dynamic_bias_stddev>0.006</dynamic_bias_stddev>
+                  <dynamic_bias_correlation_time>300</dynamic_bias_correlation_time>
+                </noise>
+              </x>
+              <y>
+                <noise type='gaussian'>
+                  <mean>0</mean>
+                  <stddev>0.004</stddev>
+                  <dynamic_bias_stddev>0.006</dynamic_bias_stddev>
+                  <dynamic_bias_correlation_time>300</dynamic_bias_correlation_time>
+                </noise>
+              </y>
+              <z>
+                <noise type='gaussian'>
+                  <mean>0</mean>
+                  <stddev>0.004</stddev>
+                  <dynamic_bias_stddev>0.006</dynamic_bias_stddev>
+                  <dynamic_bias_correlation_time>300</dynamic_bias_correlation_time>
+                </noise>
+              </z>
+            </linear_acceleration>
+          </imu>
+        </sensor>
+        <sensor name='navsat_sensor' type='navsat'>
+          <always_on>1</always_on>
+          <update_rate>30</update_rate>
+          <gps/>
+        </sensor>
+        <sensor name='air_pressure_sensor' type='air_pressure'>
+          <always_on>1</always_on>
+          <update_rate>50</update_rate>
+          <air_pressure>
+            <pressure>
+              <noise type='gaussian'>
+                <mean>0</mean>
+                <stddev>0.01</stddev>
+              </noise>
+            </pressure>
+          </air_pressure>
+        </sensor>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='airspeed'>
+        <pose>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.015</mass>
+          <inertia>
+            <ixx>1e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1e-05</iyy>
+            <iyz>0</iyz>
+            <izz>1e-05</izz>
+          </inertia>
+        </inertial>
+        <visual name='airspeed_visual'>
+          <geometry>
+            <cylinder>
+              <radius>0.01</radius>
+              <length>0.1</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='airspeed_joint' type='fixed'>
+        <child>airspeed</child>
+        <parent>base_link</parent>
+      </joint>
+      <link name='rotor_puller'>
+        <pose>0.22 0 0 3.14159 1.57079 3.14159</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.005</mass>
+          <inertia>
+            <ixx>9.75e-07</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.000166704</iyy>
+            <iyz>0</iyz>
+            <izz>0.000167604</izz>
+          </inertia>
+        </inertial>
+        <collision name='rotor_puller_collision'>
+          <pose>0 0 0 3.14159 -1.57079 3.14159</pose>
+          <geometry>
+            <box>
+              <size>0.005 0.22 0.02</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='rotor_puller_visual'>
+          <pose>0 0 0 0 0 -1.5708</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>https://fuel.ignitionrobotics.org/1.0/px4/models/rc_cessna/1/files/meshes/iris_prop_ccw.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0 0 1 1</ambient>
+            <diffuse>0 0 1 1</diffuse>
+          </material>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='rotor_puller_joint' type='revolute'>
+        <child>rotor_puller</child>
+        <parent>base_link</parent>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='left_elevon'>
+        <inertial>
+          <mass>1e-08</mass>
+          <inertia>
+            <ixx>1e-06</ixx>
+            <ixy>0</ixy>
+            <iyy>1e-06</iyy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+            <izz>1e-06</izz>
+          </inertia>
+          <pose>0 0.3 0 0 -0 0</pose>
+        </inertial>
+        <visual name='left_elevon_visual'>
+          <pose>0.07 0 -0.08 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.1 0.1 0.1</scale>
+              <uri>https://fuel.ignitionrobotics.org/1.0/px4/models/rc_cessna/1/files/meshes/left_aileron.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0 0 1 1</ambient>
+            <diffuse>0 0 1 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='LeftWheel'>
+        <pose relative_to='LeftWheelJoint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <mass>0.05</mass>
+          <inertia>
+            <ixx>3.331e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.04e-05</iyy>
+            <iyz>0</iyz>
+            <izz>2.04e-05</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <visual name='LeftWheelVisual'>
+          <pose>0 0 0 -1.5708 0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.01</length>
+              <radius>0.03</radius>
+            </cylinder>
+          </geometry>
+        </visual>
+        <collision name='LeftWheelCollision'>
+          <pose>0 0 0 -1.5708 0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.01</length>
+              <radius>0.03</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>0.5</mu2>
+                <fdir1>0 0 1</fdir1>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='RightWheel'>
+        <pose relative_to='RightWheelJoint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <mass>0.05</mass>
+          <inertia>
+            <ixx>3.331e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.04e-05</iyy>
+            <iyz>0</iyz>
+            <izz>2.04e-05</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <visual name='RightWheelVisual'>
+          <pose>0 0 0 -1.5708 0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.01</length>
+              <radius>0.03</radius>
+            </cylinder>
+          </geometry>
+        </visual>
+        <collision name='RightWheelCollision'>
+          <pose>0 0 0 -1.5708 0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.01</length>
+              <radius>0.03</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>0.5</mu2>
+                <fdir1>0 0 1</fdir1>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='CenterWheel'>
+        <pose relative_to='CenterWheelJoint'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <mass>0.05</mass>
+          <inertia>
+            <ixx>3.331e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>2.04e-05</iyy>
+            <iyz>0</iyz>
+            <izz>2.04e-05</izz>
+          </inertia>
+          <pose>0 0 0 0 -0 0</pose>
+        </inertial>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <visual name='CenterWheelVisual'>
+          <pose>0 0 0 -1.5708 0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.01</length>
+              <radius>0.025</radius>
+            </cylinder>
+          </geometry>
+        </visual>
+        <collision name='CenterWheelCollision'>
+          <pose>0 0 0 -1.5708 0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.01</length>
+              <radius>0.025</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>0.5</mu2>
+                <fdir1>0 0 1</fdir1>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='right_elevon'>
+        <inertial>
+          <mass>1e-08</mass>
+          <inertia>
+            <ixx>1e-06</ixx>
+            <ixy>0</ixy>
+            <iyy>1e-06</iyy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+            <izz>1e-06</izz>
+          </inertia>
+          <pose>0 -0.3 0 0 -0 0</pose>
+        </inertial>
+        <visual name='right_elevon_visual'>
+          <pose>0.07 0 -0.08 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.1 0.1 0.1</scale>
+              <uri>https://fuel.ignitionrobotics.org/1.0/px4/models/rc_cessna/1/files/meshes/right_aileron.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0 0 1 1</ambient>
+            <diffuse>0 0 1 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='left_flap'>
+        <inertial>
+          <mass>1e-08</mass>
+          <inertia>
+            <ixx>1e-06</ixx>
+            <ixy>0</ixy>
+            <iyy>1e-06</iyy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+            <izz>1e-06</izz>
+          </inertia>
+          <pose>0 0.15 0 0 -0 0</pose>
+        </inertial>
+        <visual name='left_flap_visual'>
+          <pose>0.07 0 -0.08 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.1 0.1 0.1</scale>
+              <uri>https://fuel.ignitionrobotics.org/1.0/px4/models/rc_cessna/1/files/meshes/left_flap.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0 0 1 1</ambient>
+            <diffuse>0 0 1 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='right_flap'>
+        <inertial>
+          <mass>1e-08</mass>
+          <inertia>
+            <ixx>1e-06</ixx>
+            <ixy>0</ixy>
+            <iyy>1e-06</iyy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+            <izz>1e-06</izz>
+          </inertia>
+          <pose>0 -0.15 0 0 -0 0</pose>
+        </inertial>
+        <visual name='right_flap_visual'>
+          <pose>0.07 0 -0.08 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.1 0.1 0.1</scale>
+              <uri>https://fuel.ignitionrobotics.org/1.0/px4/models/rc_cessna/1/files/meshes/right_flap.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0 0 1 1</ambient>
+            <diffuse>0 0 1 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='elevator'>
+        <inertial>
+          <mass>1e-08</mass>
+          <inertia>
+            <ixx>1e-06</ixx>
+            <ixy>0</ixy>
+            <iyy>1e-06</iyy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+            <izz>1e-06</izz>
+          </inertia>
+          <pose>-0.5 0 0 0 -0 0</pose>
+        </inertial>
+        <visual name='elevator_visual'>
+          <pose>0.07 0 -0.08 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.1 0.1 0.1</scale>
+              <uri>https://fuel.ignitionrobotics.org/1.0/px4/models/rc_cessna/1/files/meshes/elevators.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0 0 1 1</ambient>
+            <diffuse>0 0 1 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='rudder'>
+        <inertial>
+          <mass>1e-08</mass>
+          <inertia>
+            <ixx>1e-06</ixx>
+            <ixy>0</ixy>
+            <iyy>1e-06</iyy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+            <izz>1e-06</izz>
+          </inertia>
+          <pose>-0.5 0 0.05 0 -0 0</pose>
+        </inertial>
+        <visual name='rudder_visual'>
+          <pose>0.07 0 -0.08 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.1 0.1 0.1</scale>
+              <uri>https://fuel.ignitionrobotics.org/1.0/px4/models/rc_cessna/1/files/meshes/rudder.dae</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0 0 1 1</ambient>
+            <diffuse>0 0 1 1</diffuse>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='servo_0' type='revolute'>
+        <parent>base_link</parent>
+        <child>left_elevon</child>
+        <pose>-0.07 0.4 0.08 0 -0 0</pose>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-0.78</lower>
+            <upper>0.78</upper>
+          </limit>
+          <dynamics>
+            <damping>1</damping>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>1</implicit_spring_damper>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <joint name='servo_1' type='revolute'>
+        <parent>base_link</parent>
+        <child>right_elevon</child>
+        <pose>-0.07 -0.4 0.08 0 -0 0</pose>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-0.78</lower>
+            <upper>0.78</upper>
+          </limit>
+          <dynamics>
+            <damping>1</damping>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>1</implicit_spring_damper>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <joint name='left_flap_joint' type='revolute'>
+        <parent>base_link</parent>
+        <child>left_flap</child>
+        <pose>-0.07 0.2 0.08 0 -0 0</pose>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-0.78</lower>
+            <upper>0.78</upper>
+          </limit>
+          <dynamics>
+            <damping>1</damping>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>1</implicit_spring_damper>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <joint name='right_flap_joint' type='revolute'>
+        <parent>base_link</parent>
+        <child>right_flap</child>
+        <pose>-0.07 -0.2 0.08 0 -0 0</pose>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-0.78</lower>
+            <upper>0.78</upper>
+          </limit>
+          <dynamics>
+            <damping>1</damping>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>1</implicit_spring_damper>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <joint name='servo_2' type='revolute'>
+        <parent>base_link</parent>
+        <child>elevator</child>
+        <pose>-0.5 0 0 0 -0 0</pose>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-0.78</lower>
+            <upper>0.78</upper>
+          </limit>
+          <dynamics>
+            <damping>1</damping>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>1</implicit_spring_damper>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <joint name='rudder_joint' type='revolute'>
+        <parent>base_link</parent>
+        <child>rudder</child>
+        <pose>-0.5 0 0.05 0 -0 0</pose>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-0.78</lower>
+            <upper>0.78</upper>
+          </limit>
+          <dynamics>
+            <damping>1</damping>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>1</implicit_spring_damper>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <joint name='LeftWheelJoint' type='revolute'>
+        <parent>base_link</parent>
+        <child>LeftWheel</child>
+        <pose relative_to='base_link'>-0.035 0.13 -0.12 0 -0 0</pose>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1.79769e+308</lower>
+            <upper>1.79769e+308</upper>
+          </limit>
+          <dynamics>
+            <friction>0.02</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='RightWheelJoint' type='revolute'>
+        <parent>base_link</parent>
+        <child>RightWheel</child>
+        <pose relative_to='base_link'>-0.035 -0.13 -0.12 0 -0 0</pose>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1.79769e+308</lower>
+            <upper>1.79769e+308</upper>
+          </limit>
+          <dynamics>
+            <friction>0.02</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <joint name='CenterWheelJoint' type='revolute'>
+        <parent>base_link</parent>
+        <child>CenterWheel</child>
+        <pose relative_to='base_link'>0.135 0 -0.12 0 -0 0</pose>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1.79769e+308</lower>
+            <upper>1.79769e+308</upper>
+          </limit>
+          <dynamics>
+            <friction>0.02</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <plugin name='gz::sim::systems::LiftDrag' filename='gz-sim-lift-drag-system'>
+        <a0>0.05984281113</a0>
+        <cla>4.752798721</cla>
+        <cda>1.5</cda>
+        <cma>0.0</cma>
+        <alpha_stall>0.3391428111</alpha_stall>
+        <cla_stall>-3.85</cla_stall>
+        <cda_stall>-0.9233984055</cda_stall>
+        <cma_stall>0</cma_stall>
+        <cp>-0.05 0.45 0.05</cp>
+        <area>0.6</area>
+        <air_density>1.2041</air_density>
+        <forward>1 0 0</forward>
+        <upward>0 0 1</upward>
+        <link_name>base_link</link_name>
+        <control_joint_name>servo_0</control_joint_name>
+        <control_joint_rad_to_cl>-0.3</control_joint_rad_to_cl>
+      </plugin>
+      <plugin name='gz::sim::systems::JointPositionController' filename='gz-sim-joint-position-controller-system'>
+        <joint_name>servo_0</joint_name>
+        <sub_topic>servo_0</sub_topic>
+        <p_gain>10.0</p_gain>
+      </plugin>
+      <plugin name='gz::sim::systems::LiftDrag' filename='gz-sim-lift-drag-system'>
+        <a0>0.05984281113</a0>
+        <cla>4.752798721</cla>
+        <cda>1.5</cda>
+        <cma>0.0</cma>
+        <alpha_stall>0.3391428111</alpha_stall>
+        <cla_stall>-3.85</cla_stall>
+        <cda_stall>-0.9233984055</cda_stall>
+        <cma_stall>0</cma_stall>
+        <cp>-0.05 -0.45 0.05</cp>
+        <area>0.6</area>
+        <air_density>1.2041</air_density>
+        <forward>1 0 0</forward>
+        <upward>0 0 1</upward>
+        <link_name>base_link</link_name>
+        <control_joint_name>servo_1</control_joint_name>
+        <control_joint_rad_to_cl>-0.3</control_joint_rad_to_cl>
+      </plugin>
+      <plugin name='gz::sim::systems::JointPositionController' filename='gz-sim-joint-position-controller-system'>
+        <joint_name>servo_1</joint_name>
+        <sub_topic>servo_1</sub_topic>
+        <p_gain>10.0</p_gain>
+      </plugin>
+      <plugin name='gz::sim::systems::LiftDrag' filename='gz-sim-lift-drag-system'>
+        <a0>0.05984281113</a0>
+        <cla>4.752798721</cla>
+        <cda>0.6417112299</cda>
+        <cma>0.0</cma>
+        <alpha_stall>0.3391428111</alpha_stall>
+        <cla_stall>-3.85</cla_stall>
+        <cda_stall>-0.9233984055</cda_stall>
+        <cma_stall>0</cma_stall>
+        <cp>-0.05 0.15 0.05</cp>
+        <area>0.6</area>
+        <air_density>1.2041</air_density>
+        <forward>1 0 0</forward>
+        <upward>0 0 1</upward>
+        <link_name>base_link</link_name>
+        <control_joint_name>left_flap_joint</control_joint_name>
+        <control_joint_rad_to_cl>-0.1</control_joint_rad_to_cl>
+      </plugin>
+      <plugin name='gz::sim::systems::LiftDrag' filename='gz-sim-lift-drag-system'>
+        <a0>0.05984281113</a0>
+        <cla>4.752798721</cla>
+        <cda>0.6417112299</cda>
+        <cma>0.0</cma>
+        <alpha_stall>0.3391428111</alpha_stall>
+        <cla_stall>-3.85</cla_stall>
+        <cda_stall>-0.9233984055</cda_stall>
+        <cma_stall>0</cma_stall>
+        <cp>-0.05 -0.15 0.05</cp>
+        <area>0.6</area>
+        <air_density>1.2041</air_density>
+        <forward>1 0 0</forward>
+        <upward>0 0 1</upward>
+        <link_name>base_link</link_name>
+        <control_joint_name>right_flap_joint</control_joint_name>
+        <control_joint_rad_to_cl>-0.1</control_joint_rad_to_cl>
+      </plugin>
+      <plugin name='gz::sim::systems::LiftDrag' filename='gz-sim-lift-drag-system'>
+        <a0>-0.2</a0>
+        <cla>4.752798721</cla>
+        <cda>0.6417112299</cda>
+        <cma>0.0</cma>
+        <alpha_stall>0.3391428111</alpha_stall>
+        <cla_stall>-3.85</cla_stall>
+        <cda_stall>-0.9233984055</cda_stall>
+        <cma_stall>0</cma_stall>
+        <cp>-0.5 0 0</cp>
+        <area>0.01</area>
+        <air_density>1.2041</air_density>
+        <forward>1 0 0</forward>
+        <upward>0 0 1</upward>
+        <link_name>base_link</link_name>
+        <control_joint_name>servo_2</control_joint_name>
+        <control_joint_rad_to_cl>-4.0</control_joint_rad_to_cl>
+      </plugin>
+      <plugin name='gz::sim::systems::JointPositionController' filename='gz-sim-joint-position-controller-system'>
+        <joint_name>servo_2</joint_name>
+        <sub_topic>servo_2</sub_topic>
+        <p_gain>10.0</p_gain>
+      </plugin>
+      <plugin name='gz::sim::systems::LiftDrag' filename='gz-sim-lift-drag-system'>
+        <a0>0.0</a0>
+        <cla>4.752798721</cla>
+        <cda>0.6417112299</cda>
+        <cma>0.0</cma>
+        <alpha_stall>0.3391428111</alpha_stall>
+        <cla_stall>-3.85</cla_stall>
+        <cda_stall>-0.9233984055</cda_stall>
+        <cma_stall>0</cma_stall>
+        <cp>-0.5 0 0.05</cp>
+        <area>0.1</area>
+        <air_density>1.2041</air_density>
+        <forward>1 0 0</forward>
+        <upward>0 1 0</upward>
+        <link_name>base_link</link_name>
+        <control_joint_name>rudder_joint</control_joint_name>
+        <control_joint_rad_to_cl>0.8</control_joint_rad_to_cl>
+      </plugin>
+      <plugin name='gz::sim::systems::JointPositionController' filename='gz-sim-joint-position-controller-system'>
+        <joint_name>rudder_joint</joint_name>
+        <sub_topic>servo_3</sub_topic>
+        <p_gain>10.0</p_gain>
+      </plugin>
+      <plugin name='gz::sim::systems::MulticopterMotorModel' filename='gz-sim-multicopter-motor-model-system'>
+        <jointName>rotor_puller_joint</jointName>
+        <linkName>rotor_puller</linkName>
+        <turningDirection>cw</turningDirection>
+        <timeConstantUp>0.0125</timeConstantUp>
+        <timeConstantDown>0.025</timeConstantDown>
+        <maxRotVelocity>1000</maxRotVelocity>
+        <motorConstant>1.2e-05</motorConstant>
+        <momentConstant>0.016</momentConstant>
+        <commandSubTopic>command/motor_speed</commandSubTopic>
+        <motorNumber>0</motorNumber>
+        <rotorDragCoefficient>8.06428e-05</rotorDragCoefficient>
+        <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
+        <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
+        <motorType>velocity</motorType>
+      </plugin>
+      <static>0</static>
+    </model>
+    <model name='naoH25V40'>
+      <pose>4.43001 2.2024 0.35 0 -0 0</pose>
+      <link name='Torso'>
+        <pose>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>-0.00413 0 0.04342 0 -0 0</pose>
+          <mass>1.04956</mass>
+          <inertia>
+            <ixx>0.00506234</ixx>
+            <ixy>1.43116e-05</ixy>
+            <ixz>0.000155191</ixz>
+            <iyy>0.00488014</iyy>
+            <iyz>-2.70793e-05</iyz>
+            <izz>0.0016103</izz>
+          </inertia>
+        </inertial>
+        <collision name='Torso_collision'>
+          <pose>0 0 0.01 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.2115</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Torso_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.1 0.1 0.1</scale>
+              <uri>/home/santi/.ignition/fuel/fuel.ignitionrobotics.org/yasem/models/algo/1/meshes/V40/Torso.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='World' type='fixed'>
+        <child>Torso</child>
+        <parent>world</parent>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+        </axis>
+      </joint>
+      <link name='Neck'>
+        <pose>0 0 0.1265 0 -0 0</pose>
+        <inertial>
+          <pose>-1e-05 0 -0.02742 0 -0 0</pose>
+          <mass>0.06442</mass>
+          <inertia>
+            <ixx>7.4993e-05</ixx>
+            <ixy>1.57e-09</ixy>
+            <ixz>-1.834e-08</ixz>
+            <iyy>7.6e-05</iyy>
+            <iyz>-5.295e-08</iyz>
+            <izz>5.53373e-06</izz>
+          </inertia>
+        </inertial>
+        <visual name='Neck_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.1 0.1 0.1</scale>
+              <uri>/home/santi/.ignition/fuel/fuel.ignitionrobotics.org/yasem/models/algo/1/meshes/V40/HeadYaw.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='HeadYaw' type='revolute'>
+        <child>Neck</child>
+        <parent>Torso</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0 0 1</xyz>
+          <limit>
+            <lower>-2.08567</lower>
+            <upper>2.08567</upper>
+            <effort>40.25</effort>
+            <velocity>8.26797</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.1</damping>
+            <friction>0</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>1</implicit_spring_damper>
+            <cfm_damping>1</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>HeadYaw</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='Head'>
+        <pose>0 0 0.1265 0 -0 0</pose>
+        <inertial>
+          <pose>-0.00112 0 0.05258 0 -0 0</pose>
+          <mass>0.60533</mass>
+          <inertia>
+            <ixx>0.0026313</ixx>
+            <ixy>8.78814e-06</ixy>
+            <ixz>4.09847e-05</ixz>
+            <iyy>0.00249112</iyy>
+            <iyz>-2.99579e-05</iyz>
+            <izz>0.000985736</izz>
+          </inertia>
+        </inertial>
+        <collision name='Head_collision'>
+          <pose>0 0 0.058 1.57 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.14</length>
+              <radius>0.04</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.5</mu>
+                <mu2>0.5</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='Head_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.1 0.1 0.1</scale>
+              <uri>/home/santi/.ignition/fuel/fuel.ignitionrobotics.org/yasem/models/algo/1/meshes/V40/HeadPitch.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay/>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='HeadPitch' type='revolute'>
+        <child>Head</child>
+        <parent>Neck</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0 1 0</xyz>
+          <limit>
+            <lower>-0.671952</lower>
+            <upper>0.514872</upper>
+            <effort>40.25</effort>
+            <velocity>7.19407</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.1</damping>
+            <friction>0</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>1</implicit_spring_damper>
+            <cfm_damping>1</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>HeadPitch</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='LPelvis'>
+        <pose>0 0.05 -0.085 0 -0 0</pose>
+        <inertial>
+          <pose>-0.00781 -0.01114 0.02661 0 -0 0</pose>
+          <mass>0.06981</mass>
+          <inertia>
+            <ixx>8.15023e-05</ixx>
+            <ixy>-4.99449e-06</ixy>
+            <ixz>1.27482e-05</ixz>
+            <iyy>0.000101326</iyy>
+            <iyz>2.34547e-05</iyz>
+            <izz>6.26236e-05</izz>
+          </inertia>
+        </inertial>
+        <visual name='LPelvis_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.1 0.1 0.1</scale>
+              <uri>/home/santi/.ignition/fuel/fuel.ignitionrobotics.org/yasem/models/algo/1/meshes/V40/LHipYawPitch.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='LHipYawPitch' type='revolute'>
+        <child>LPelvis</child>
+        <parent>Torso</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0 0.707106 -0.707106</xyz>
+          <limit>
+            <lower>-1.14529</lower>
+            <upper>0.740718</upper>
+            <effort>59.5</effort>
+            <velocity>4.16174</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.1</damping>
+            <friction>0</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>1</implicit_spring_damper>
+            <cfm_damping>1</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>LHipYawPitch</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='LHip'>
+        <pose>0 0.05 -0.085 0 -0 0</pose>
+        <inertial>
+          <pose>-0.01549 0.00029 -0.00515 0 -0 0</pose>
+          <mass>0.13053</mass>
+          <inertia>
+            <ixx>2.75835e-05</ixx>
+            <ixy>-2.233e-08</ixy>
+            <ixz>-4.08164e-06</ixz>
+            <iyy>9.82706e-05</iyy>
+            <iyz>-4.19e-09</iyz>
+            <izz>8.80997e-05</izz>
+          </inertia>
+        </inertial>
+        <visual name='LHip_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.1 0.1 0.1</scale>
+              <uri>/home/santi/.ignition/fuel/fuel.ignitionrobotics.org/yasem/models/algo/1/meshes/V40/LHipRoll.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='LHipRoll' type='revolute'>
+        <child>LHip</child>
+        <parent>LPelvis</parent>
+        <axis>
+          <xyz expressed_in='__model__'>1 0 0</xyz>
+          <limit>
+            <lower>-0.379435</lower>
+            <upper>0.79046</upper>
+            <effort>59.5</effort>
+            <velocity>4.16174</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.1</damping>
+            <friction>0</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>1</implicit_spring_damper>
+            <cfm_damping>1</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>LHipRoll</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='LThigh'>
+        <pose>0 0.05 -0.085 0 -0 0</pose>
+        <inertial>
+          <pose>0.00138 0.00221 -0.05373 0 -0 0</pose>
+          <mass>0.38968</mass>
+          <inertia>
+            <ixx>0.00163672</ixx>
+            <ixy>9.2451e-07</ixy>
+            <ixz>8.53067e-05</ixz>
+            <iyy>0.00159107</iyy>
+            <iyz>3.83616e-05</iyz>
+            <izz>0.000303743</izz>
+          </inertia>
+        </inertial>
+        <collision name='LThigh_collision'>
+          <pose>0 0 -0.05 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.1</length>
+              <radius>0.04</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.5</mu>
+                <mu2>0.5</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='LThigh_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.1 0.1 0.1</scale>
+              <uri>/home/santi/.ignition/fuel/fuel.ignitionrobotics.org/yasem/models/algo/1/meshes/V40/LHipPitch.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='LHipPitch' type='revolute'>
+        <child>LThigh</child>
+        <parent>LHip</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0 1 0</xyz>
+          <limit>
+            <lower>-1.53589</lower>
+            <upper>0.48398</upper>
+            <effort>59.5</effort>
+            <velocity>6.40239</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.1</damping>
+            <friction>0</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>1</implicit_spring_damper>
+            <cfm_damping>1</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>LHipPitch</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='LTibia'>
+        <pose>0 0.05 -0.185 0 -0 0</pose>
+        <inertial>
+          <pose>0.00453 0.00225 -0.04936 0 -0 0</pose>
+          <mass>0.29142</mass>
+          <inertia>
+            <ixx>0.00118208</ixx>
+            <ixy>6.3362e-07</ixy>
+            <ixz>3.6497e-05</ixz>
+            <iyy>0.00112865</iyy>
+            <iyz>3.94952e-05</iyz>
+            <izz>0.000193227</izz>
+          </inertia>
+        </inertial>
+        <collision name='LTibia_collision'>
+          <pose>0 0 -0.05 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.1</length>
+              <radius>0.04</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.5</mu>
+                <mu2>0.5</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='LTibia_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.1 0.1 0.1</scale>
+              <uri>/home/santi/.ignition/fuel/fuel.ignitionrobotics.org/yasem/models/algo/1/meshes/V40/LKneePitch.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='LKneePitch' type='revolute'>
+        <child>LTibia</child>
+        <parent>LThigh</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0 1 0</xyz>
+          <limit>
+            <lower>-0.0923279</lower>
+            <upper>2.11255</upper>
+            <effort>59.5</effort>
+            <velocity>6.40239</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.1</damping>
+            <friction>0</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>1</implicit_spring_damper>
+            <cfm_damping>1</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>LKneePitch</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='LAnkle'>
+        <pose>0 0.05 -0.2879 0 -0 0</pose>
+        <inertial>
+          <pose>0.00045 0.00029 0.00685 0 -0 0</pose>
+          <mass>0.13416</mass>
+          <inertia>
+            <ixx>3.85098e-05</ixx>
+            <ixy>-2.634e-08</ixy>
+            <ixz>3.86194e-06</ixz>
+            <iyy>7.42653e-05</iyy>
+            <iyz>1.834e-08</iyz>
+            <izz>5.48654e-05</izz>
+          </inertia>
+        </inertial>
+        <visual name='LAnkle_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.1 0.1 0.1</scale>
+              <uri>/home/santi/.ignition/fuel/fuel.ignitionrobotics.org/yasem/models/algo/1/meshes/V40/LAnklePitch.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='LAnklePitch' type='revolute'>
+        <child>LAnkle</child>
+        <parent>LTibia</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0 1 0</xyz>
+          <limit>
+            <lower>-1.18944</lower>
+            <upper>0.922581</upper>
+            <effort>59.5</effort>
+            <velocity>6.40239</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.1</damping>
+            <friction>0</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>1</implicit_spring_damper>
+            <cfm_damping>1</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>LAnklePitch</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='LSole'>
+        <pose>0 0.05 -0.2879 0 -0 0</pose>
+        <inertial>
+          <pose>0.02542 0.0033 -0.03239 0 -0 0</pose>
+          <mass>0.16184</mass>
+          <inertia>
+            <ixx>0.000269442</ixx>
+            <ixy>-5.69572e-06</ixy>
+            <ixz>0.000139379</ixz>
+            <iyy>0.000644343</iyy>
+            <iyz>1.87409e-05</iyz>
+            <izz>0.000525757</izz>
+          </inertia>
+        </inertial>
+        <collision name='LSole_collision'>
+          <pose>0.02 0.005 -0.037 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.16 0.085 0.015</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <max_vel>0.1</max_vel>
+                <min_depth>0.003</min_depth>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.5</mu>
+                <mu2>0.5</mu2>
+                <fdir1>1 0 0</fdir1>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='LSole_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.1 0.1 0.1</scale>
+              <uri>/home/santi/.ignition/fuel/fuel.ignitionrobotics.org/yasem/models/algo/1/meshes/V40/LAnkleRoll.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='LAnkleRoll' type='revolute'>
+        <child>LSole</child>
+        <parent>LAnkle</parent>
+        <axis>
+          <xyz expressed_in='__model__'>1 0 0</xyz>
+          <limit>
+            <lower>-0.397761</lower>
+            <upper>0.768992</upper>
+            <effort>59.5</effort>
+            <velocity>4.16174</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.1</damping>
+            <friction>0</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>1</implicit_spring_damper>
+            <cfm_damping>1</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>LAnkleRoll</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='LShoulder'>
+        <pose>0 0.098 0.1 0 -0 0</pose>
+        <inertial>
+          <pose>-0.00165 -0.02663 0.00014 0 -0 0</pose>
+          <mass>0.07504</mass>
+          <inertia>
+            <ixx>8.42843e-05</ixx>
+            <ixy>-2.02802e-06</ixy>
+            <ixz>2.338e-08</ixz>
+            <iyy>1.41556e-05</iyy>
+            <iyz>-1.972e-08</iyz>
+            <izz>8.64195e-05</izz>
+          </inertia>
+        </inertial>
+        <visual name='LShoulder_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.1 0.1 0.1</scale>
+              <uri>/home/santi/.ignition/fuel/fuel.ignitionrobotics.org/yasem/models/algo/1/meshes/V40/LShoulderPitch.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='LShoulderPitch' type='revolute'>
+        <child>LShoulder</child>
+        <parent>Torso</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0 1 0</xyz>
+          <limit>
+            <lower>-2.08567</lower>
+            <upper>2.08567</upper>
+            <effort>40.25</effort>
+            <velocity>8.26797</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.1</damping>
+            <friction>0</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>1</implicit_spring_damper>
+            <cfm_damping>1</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>LShoulderPitch</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='LBicep'>
+        <pose>0 0.098 0.1 0 -0 0</pose>
+        <inertial>
+          <pose>0.02455 0.00563 0.0033 0 -0 0</pose>
+          <mass>0.15777</mass>
+          <inertia>
+            <ixx>9.38999e-05</ixx>
+            <ixy>-4.71445e-05</ixy>
+            <ixz>-2.69947e-05</ixz>
+            <iyy>0.000371519</iyy>
+            <iyz>-2.45977e-06</iyz>
+            <izz>0.000341901</izz>
+          </inertia>
+        </inertial>
+        <collision name='LBicep_collision'>
+          <pose>0.045 0 0 1.57 -0 1.8</pose>
+          <geometry>
+            <cylinder>
+              <length>0.09</length>
+              <radius>0.02</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.5</mu>
+                <mu2>0.5</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='LBicep_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.1 0.1 0.1</scale>
+              <uri>/home/santi/.ignition/fuel/fuel.ignitionrobotics.org/yasem/models/algo/1/meshes/V40/LShoulderRoll.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='LShoulderRoll' type='revolute'>
+        <child>LBicep</child>
+        <parent>LShoulder</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0 0 1</xyz>
+          <limit>
+            <lower>-0.314159</lower>
+            <upper>1.32645</upper>
+            <effort>40.25</effort>
+            <velocity>7.19407</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.1</damping>
+            <friction>0</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>1</implicit_spring_damper>
+            <cfm_damping>1</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>LShoulderRoll</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='LElbow'>
+        <pose>0.105 0.113 0.1 0 -0 0</pose>
+        <inertial>
+          <pose>-0.02744 0 -0.00014 0 -0 0</pose>
+          <mass>0.06483</mass>
+          <inertia>
+            <ixx>5.59715e-06</ixx>
+            <ixy>4.21e-09</ixy>
+            <ixz>4.319e-08</ixz>
+            <iyy>7.54331e-05</iyy>
+            <iyz>-1.84e-09</iyz>
+            <izz>7.64434e-05</izz>
+          </inertia>
+        </inertial>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='LElbowYaw' type='revolute'>
+        <child>LElbow</child>
+        <parent>LBicep</parent>
+        <axis>
+          <xyz expressed_in='__model__'>1 0 0</xyz>
+          <limit>
+            <lower>-2.08567</lower>
+            <upper>2.08567</upper>
+            <effort>40.25</effort>
+            <velocity>8.26797</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.1</damping>
+            <friction>0</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>1</implicit_spring_damper>
+            <cfm_damping>1</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>LElbowYaw</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='LForeArm'>
+        <pose>0.105 0.113 0.1 0 -0 0</pose>
+        <inertial>
+          <pose>0.02556 0.00281 0.00076 0 -0 0</pose>
+          <mass>0.07761</mass>
+          <inertia>
+            <ixx>2.53322e-05</ixx>
+            <ixy>-2.34271e-06</ixy>
+            <ixz>7.459e-08</ixz>
+            <iyy>8.91322e-05</iyy>
+            <iyz>-2.655e-08</iyz>
+            <izz>8.72873e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='LForeArm_collision'>
+          <pose>0.025325 0 0 1.57 -0 1.57</pose>
+          <geometry>
+            <cylinder>
+              <length>0.05065</length>
+              <radius>0.02</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.5</mu>
+                <mu2>0.5</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='LForeArm_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.1 0.1 0.1</scale>
+              <uri>/home/santi/.ignition/fuel/fuel.ignitionrobotics.org/yasem/models/algo/1/meshes/V40/LElbowRoll.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='LElbowRoll' type='revolute'>
+        <child>LForeArm</child>
+        <parent>LElbow</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0 0 1</xyz>
+          <limit>
+            <lower>-1.54462</lower>
+            <upper>-0.0349066</upper>
+            <effort>40.25</effort>
+            <velocity>7.19407</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.1</damping>
+            <friction>0</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>1</implicit_spring_damper>
+            <cfm_damping>1</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>LElbowRoll</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='LWrist'>
+        <pose>0.16095 0.113 0.1 0 -0 0</pose>
+        <inertial>
+          <pose>0.03434 -0.00088 0.00308 0 -0 0</pose>
+          <mass>0.18533</mass>
+          <inertia>
+            <ixx>7.05493e-05</ixx>
+            <ixy>5.71599e-06</ixy>
+            <ixz>-2.24744e-05</ixz>
+            <iyy>0.000356062</iyy>
+            <iyz>3.17771e-06</iyz>
+            <izz>0.000351919</izz>
+          </inertia>
+        </inertial>
+        <collision name='LWrist_collision'>
+          <pose>0.039 0 0 1.27 -0 1.57</pose>
+          <geometry>
+            <box>
+              <size>0.06 0.04 0.058</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.5</mu>
+                <mu2>0.5</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='LWrist_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.1 0.1 0.1</scale>
+              <uri>/home/santi/.ignition/fuel/fuel.ignitionrobotics.org/yasem/models/algo/1/meshes/V40/LWristYaw.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='LWristYaw' type='revolute'>
+        <child>LWrist</child>
+        <parent>LForeArm</parent>
+        <axis>
+          <xyz expressed_in='__model__'>1 0 0</xyz>
+          <limit>
+            <lower>-1.82387</lower>
+            <upper>1.82387</upper>
+            <effort>40.25</effort>
+            <velocity>24.6229</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.1</damping>
+            <friction>0</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>1</implicit_spring_damper>
+            <cfm_damping>1</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>LWristYaw</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='RPelvis'>
+        <pose>0 -0.05 -0.085 0 -0 0</pose>
+        <inertial>
+          <pose>-0.00781 0.01114 0.02661 0 -0 0</pose>
+          <mass>0.06981</mass>
+          <inertia>
+            <ixx>8.9972e-05</ixx>
+            <ixy>5.00219e-06</ixy>
+            <ixz>1.27352e-05</ixz>
+            <iyy>0.000105526</iyy>
+            <iyz>-2.77008e-05</iyz>
+            <izz>6.68872e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='RPelvis_collision'>
+          <pose>0 0 -0.05 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.1</length>
+              <radius>0.04</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.5</mu>
+                <mu2>0.5</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='RPelvis_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.1 0.1 0.1</scale>
+              <uri>/home/santi/.ignition/fuel/fuel.ignitionrobotics.org/yasem/models/algo/1/meshes/V40/RHipYawPitch.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='RHipYawPitch' type='revolute'>
+        <child>RPelvis</child>
+        <parent>Torso</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0 0.707106 0.707106</xyz>
+          <limit>
+            <lower>-1.14529</lower>
+            <upper>0.740718</upper>
+            <effort>59.5</effort>
+            <velocity>4.16174</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.1</damping>
+            <friction>0</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>1</implicit_spring_damper>
+            <cfm_damping>1</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>RHipYawPitch</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='RHip'>
+        <pose>0 -0.05 -0.085 0 -0 0</pose>
+        <inertial>
+          <pose>-0.01549 -0.00029 -0.00515 0 -0 0</pose>
+          <mass>0.13053</mass>
+          <inertia>
+            <ixx>2.75865e-05</ixx>
+            <ixy>-1.919e-08</ixy>
+            <ixz>-4.10822e-06</ixz>
+            <iyy>9.827e-05</iyy>
+            <iyz>2.51e-09</iyz>
+            <izz>8.81033e-05</izz>
+          </inertia>
+        </inertial>
+        <visual name='RHip_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.1 0.1 0.1</scale>
+              <uri>/home/santi/.ignition/fuel/fuel.ignitionrobotics.org/yasem/models/algo/1/meshes/V40/RHipRoll.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='RHipRoll' type='revolute'>
+        <child>RHip</child>
+        <parent>RPelvis</parent>
+        <axis>
+          <xyz expressed_in='__model__'>1 0 0</xyz>
+          <limit>
+            <lower>-0.79046</lower>
+            <upper>0.379435</upper>
+            <effort>59.5</effort>
+            <velocity>4.16174</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.1</damping>
+            <friction>0</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>1</implicit_spring_damper>
+            <cfm_damping>1</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>RHipRoll</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='RThigh'>
+        <pose>0 -0.05 -0.085 0 -0 0</pose>
+        <inertial>
+          <pose>0.00138 -0.00221 -0.05373 0 -0 0</pose>
+          <mass>0.38968</mass>
+          <inertia>
+            <ixx>0.00163748</ixx>
+            <ixy>-8.3954e-07</ixy>
+            <ixz>8.5883e-05</ixz>
+            <iyy>0.00159221</iyy>
+            <iyz>-3.91763e-05</iyz>
+            <izz>0.000303978</izz>
+          </inertia>
+        </inertial>
+        <visual name='RThigh_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.1 0.1 0.1</scale>
+              <uri>/home/santi/.ignition/fuel/fuel.ignitionrobotics.org/yasem/models/algo/1/meshes/V40/RHipPitch.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='RHipPitch' type='revolute'>
+        <child>RThigh</child>
+        <parent>RHip</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0 1 0</xyz>
+          <limit>
+            <lower>-1.53589</lower>
+            <upper>0.48398</upper>
+            <effort>59.5</effort>
+            <velocity>6.40239</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.1</damping>
+            <friction>0</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>1</implicit_spring_damper>
+            <cfm_damping>1</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>RHipPitch</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='RTibia'>
+        <pose>0 -0.05 -0.185 0 -0 0</pose>
+        <inertial>
+          <pose>0.00453 -0.00225 -0.04936 0 -0 0</pose>
+          <mass>0.29142</mass>
+          <inertia>
+            <ixx>0.00118283</ixx>
+            <ixy>-8.965e-07</ixy>
+            <ixz>2.79969e-05</ixz>
+            <iyy>0.00112828</iyy>
+            <iyz>-3.8476e-05</iyz>
+            <izz>0.000191453</izz>
+          </inertia>
+        </inertial>
+        <collision name='RTibia_collision'>
+          <pose>0 0 -0.05 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.1</length>
+              <radius>0.04</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.5</mu>
+                <mu2>0.5</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='RTibia_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.1 0.1 0.1</scale>
+              <uri>/home/santi/.ignition/fuel/fuel.ignitionrobotics.org/yasem/models/algo/1/meshes/V40/RKneePitch.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='RKneePitch' type='revolute'>
+        <child>RTibia</child>
+        <parent>RThigh</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0 1 0</xyz>
+          <limit>
+            <lower>-0.0923279</lower>
+            <upper>2.11255</upper>
+            <effort>59.5</effort>
+            <velocity>6.40239</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.1</damping>
+            <friction>0</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>1</implicit_spring_damper>
+            <cfm_damping>1</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>RKneePitch</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='RAnkle'>
+        <pose>0 -0.05 -0.2879 0 -0 0</pose>
+        <inertial>
+          <pose>0.00045 -0.00029 0.00685 0 -0 0</pose>
+          <mass>0.13416</mass>
+          <inertia>
+            <ixx>3.85081e-05</ixx>
+            <ixy>6.434e-08</ixy>
+            <ixz>3.87466e-06</ixz>
+            <iyy>7.43108e-05</iyy>
+            <iyz>-4.58e-09</iyz>
+            <izz>5.49131e-05</izz>
+          </inertia>
+        </inertial>
+        <visual name='RAnkle_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.1 0.1 0.1</scale>
+              <uri>/home/santi/.ignition/fuel/fuel.ignitionrobotics.org/yasem/models/algo/1/meshes/V40/RAnklePitch.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='RAnklePitch' type='revolute'>
+        <child>RAnkle</child>
+        <parent>RTibia</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0 1 0</xyz>
+          <limit>
+            <lower>-1.1863</lower>
+            <upper>0.932006</upper>
+            <effort>59.5</effort>
+            <velocity>6.40239</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.1</damping>
+            <friction>0</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>1</implicit_spring_damper>
+            <cfm_damping>1</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>RAnklePitch</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='RSole'>
+        <pose>0 -0.05 -0.2879 0 -0 0</pose>
+        <inertial>
+          <pose>0.02542 -0.0033 -0.03239 0 -0 0</pose>
+          <mass>0.16184</mass>
+          <inertia>
+            <ixx>0.000269302</ixx>
+            <ixy>5.87505e-06</ixy>
+            <ixz>0.000139133</ixz>
+            <iyy>0.000643474</iyy>
+            <iyz>-1.88492e-05</iyz>
+            <izz>0.000525035</izz>
+          </inertia>
+        </inertial>
+        <collision name='RSole_collision'>
+          <pose>0.02 -0.005 -0.037 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.16 0.085 0.015</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <max_vel>0.1</max_vel>
+                <min_depth>0.003</min_depth>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.5</mu>
+                <mu2>0.5</mu2>
+                <fdir1>1 0 0</fdir1>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='RSole_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.1 0.1 0.1</scale>
+              <uri>/home/santi/.ignition/fuel/fuel.ignitionrobotics.org/yasem/models/algo/1/meshes/V40/RAnkleRoll.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='RAnkleRoll' type='revolute'>
+        <child>RSole</child>
+        <parent>RAnkle</parent>
+        <axis>
+          <xyz expressed_in='__model__'>1 0 0</xyz>
+          <limit>
+            <lower>-0.768992</lower>
+            <upper>0.397935</upper>
+            <effort>59.5</effort>
+            <velocity>4.16174</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.1</damping>
+            <friction>0</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>1</implicit_spring_damper>
+            <cfm_damping>1</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>RAnkleRoll</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='RShoulder'>
+        <pose>0 -0.098 0.1 0 -0 0</pose>
+        <inertial>
+          <pose>-0.00165 0.02663 0.00014 0 -0 0</pose>
+          <mass>0.07504</mass>
+          <inertia>
+            <ixx>8.42843e-05</ixx>
+            <ixy>2.02802e-06</ixy>
+            <ixz>2.338e-08</ixz>
+            <iyy>1.41556e-05</iyy>
+            <iyz>1.972e-08</iyz>
+            <izz>8.64195e-05</izz>
+          </inertia>
+        </inertial>
+        <visual name='RShoulder_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.1 0.1 0.1</scale>
+              <uri>/home/santi/.ignition/fuel/fuel.ignitionrobotics.org/yasem/models/algo/1/meshes/V40/RShoulderPitch.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='RShoulderPitch' type='revolute'>
+        <child>RShoulder</child>
+        <parent>Torso</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0 1 0</xyz>
+          <limit>
+            <lower>-2.08567</lower>
+            <upper>2.08567</upper>
+            <effort>40.25</effort>
+            <velocity>8.26797</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.1</damping>
+            <friction>0</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>1</implicit_spring_damper>
+            <cfm_damping>1</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>RShoulderPitch</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='RBicep'>
+        <pose>0 -0.098 0.1 0 -0 0</pose>
+        <inertial>
+          <pose>0.02455 -0.00563 0.0033 0 -0 0</pose>
+          <mass>0.15777</mass>
+          <inertia>
+            <ixx>0.00011012</ixx>
+            <ixy>7.66913e-05</ixy>
+            <ixz>-2.60461e-05</ixz>
+            <iyy>0.000367577</iyy>
+            <iyz>1.20983e-05</iyz>
+            <izz>0.000354618</izz>
+          </inertia>
+        </inertial>
+        <collision name='RBicep_collision'>
+          <pose>0.045 0 0 1.57 0 -1.8</pose>
+          <geometry>
+            <cylinder>
+              <length>0.09</length>
+              <radius>0.02</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.5</mu>
+                <mu2>0.5</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='RBicep_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.1 0.1 0.1</scale>
+              <uri>/home/santi/.ignition/fuel/fuel.ignitionrobotics.org/yasem/models/algo/1/meshes/V40/RShoulderRoll.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='RShoulderRoll' type='revolute'>
+        <child>RBicep</child>
+        <parent>RShoulder</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0 0 1</xyz>
+          <limit>
+            <lower>-1.32645</lower>
+            <upper>0.314159</upper>
+            <effort>40.25</effort>
+            <velocity>7.19407</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.1</damping>
+            <friction>0</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>1</implicit_spring_damper>
+            <cfm_damping>1</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>RShoulderRoll</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='RElbow'>
+        <pose>0.105 -0.113 0.1 0 -0 0</pose>
+        <inertial>
+          <pose>-0.02744 0 -0.00014 0 -0 0</pose>
+          <mass>0.06483</mass>
+          <inertia>
+            <ixx>5.59715e-06</ixx>
+            <ixy>4.21e-09</ixy>
+            <ixz>4.319e-08</ixz>
+            <iyy>7.54331e-05</iyy>
+            <iyz>-1.84e-09</iyz>
+            <izz>7.64434e-05</izz>
+          </inertia>
+        </inertial>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='RElbowYaw' type='revolute'>
+        <child>RElbow</child>
+        <parent>RBicep</parent>
+        <axis>
+          <xyz expressed_in='__model__'>1 0 0</xyz>
+          <limit>
+            <lower>-2.08567</lower>
+            <upper>2.08567</upper>
+            <effort>40.25</effort>
+            <velocity>8.26797</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.1</damping>
+            <friction>0</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>1</implicit_spring_damper>
+            <cfm_damping>1</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>RElbowYaw</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='RForeArm'>
+        <pose>0.105 -0.113 0.1 0 -0 0</pose>
+        <inertial>
+          <pose>0.02556 -0.00281 0.00076 0 -0 0</pose>
+          <mass>0.07761</mass>
+          <inertia>
+            <ixx>2.53907e-05</ixx>
+            <ixy>2.33243e-06</ixy>
+            <ixz>-6.0117e-07</ixz>
+            <iyy>8.92204e-05</iyy>
+            <iyz>2.694e-08</iyz>
+            <izz>8.72484e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='RForeArm_collision'>
+          <pose>0.025325 0 0 1.57 -0 1.57</pose>
+          <geometry>
+            <cylinder>
+              <length>0.05065</length>
+              <radius>0.02</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.5</mu>
+                <mu2>0.5</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='RForeArm_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.1 0.1 0.1</scale>
+              <uri>/home/santi/.ignition/fuel/fuel.ignitionrobotics.org/yasem/models/algo/1/meshes/V40/RElbowRoll.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='RElbowRoll' type='revolute'>
+        <child>RForeArm</child>
+        <parent>RElbow</parent>
+        <axis>
+          <xyz expressed_in='__model__'>0 0 1</xyz>
+          <limit>
+            <lower>0.0349066</lower>
+            <upper>1.54462</upper>
+            <effort>40.25</effort>
+            <velocity>7.19407</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.1</damping>
+            <friction>0</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>1</implicit_spring_damper>
+            <cfm_damping>1</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>RElbowRoll</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='RWrist'>
+        <pose>0.16095 -0.113 0.1 0 -0 0</pose>
+        <inertial>
+          <pose>0.03434 0.00088 0.00308 0 -0 0</pose>
+          <mass>0.18533</mass>
+          <inertia>
+            <ixx>7.05493e-05</ixx>
+            <ixy>5.71599e-06</ixy>
+            <ixz>-2.24744e-05</ixz>
+            <iyy>0.000356062</iyy>
+            <iyz>3.17771e-06</iyz>
+            <izz>0.000351919</izz>
+          </inertia>
+        </inertial>
+        <collision name='RWrist_collision'>
+          <pose>0.039 0 0 1.27 -0 1.57</pose>
+          <geometry>
+            <box>
+              <size>0.06 0.04 0.058</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.5</mu>
+                <mu2>0.5</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='RWrist_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.1 0.1 0.1</scale>
+              <uri>/home/santi/.ignition/fuel/fuel.ignitionrobotics.org/yasem/models/algo/1/meshes/V40/RWristYaw.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='RWristYaw' type='revolute'>
+        <child>RWrist</child>
+        <parent>RForeArm</parent>
+        <axis>
+          <xyz expressed_in='__model__'>1 0 0</xyz>
+          <limit>
+            <lower>-1.82387</lower>
+            <upper>1.82387</upper>
+            <effort>40.25</effort>
+            <velocity>24.6229</velocity>
+          </limit>
+          <dynamics>
+            <damping>0.1</damping>
+            <friction>0</friction>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>1</implicit_spring_damper>
+            <cfm_damping>1</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.2</erp>
+            </limit>
+          </ode>
+        </physics>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>RWristYaw</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+    </model>
+    <state world_name='default'>
+      <sim_time>280 297000000</sim_time>
+      <real_time>282 129770528</real_time>
+      <wall_time>1734610166 172334405</wall_time>
+      <iterations>280297</iterations>
+      <model name='brick_box_3x1x3'>
+        <pose>3.59918 -0.149597 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='chassis'>
+          <pose>3.59918 -0.149597 1.5 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='grey_wall'>
+        <pose>-0.453086 -1.18781 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>-0.453086 -1.18781 1.4 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='grey_wall_0'>
+        <pose>-2.56414 0.751311 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>-2.56414 0.751311 1.4 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='grey_wall_1'>
+        <pose>2.05068 3.35336 0 0 -0 1.2046</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>2.05068 3.35336 1.4 0 -0 1.2046</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='ground_plane'>
+        <pose>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='naoH25V40'>
+        <pose>4.43001 2.2024 0.35 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='Head'>
+          <pose>4.43001 2.2024 0.476499 -1e-06 -0.672161 -0.008835</pose>
+          <velocity>-0.000693 1.8e-05 0.000144 -3.2e-05 -0.04374 -0.000663</velocity>
+          <acceleration>-3.47831 0.043578 -0.818618 1.60348 1.06954 -1.04751</acceleration>
+          <wrench>-2.10553 0.026379 -0.495534 0 -0 0</wrench>
+        </link>
+        <link name='LAnkle'>
+          <pose>4.43535 2.24362 0.06236 -0.051439 0.202374 0.431133</pose>
+          <velocity>1e-05 9e-06 -2e-06 -0.000111 0.000372 0.000811</velocity>
+          <acceleration>-0.00951 -0.002346 -0.003976 0.154699 0.053768 -0.133348</acceleration>
+          <wrench>-0.001276 -0.000315 -0.000533 0 -0 0</wrench>
+        </link>
+        <link name='LBicep'>
+          <pose>4.43001 2.3004 0.45 -1.79348 1.46701 -1.79232</pose>
+          <velocity>-8e-06 0 -3e-06 -0.000175 -4.1e-05 3.8e-05</velocity>
+          <acceleration>-0.022032 0.00095 -0.008356 -0.01949 -0.154112 0.462304</acceleration>
+          <wrench>-0.003476 0.00015 -0.001318 0 -0 0</wrench>
+        </link>
+        <link name='LElbow'>
+          <pose>4.42758 2.30471 0.344049 -2.10329 1.46701 -1.79233</pose>
+          <velocity>-4e-06 -1.8e-05 -4e-06 2e-06 0.000728 0.00773</velocity>
+          <acceleration>-0.017945 0.000457 -0.00896 0.005266 -0.159502 0.249712</acceleration>
+          <wrench>-0.001163 3e-05 -0.000581 0 -0 0</wrench>
+        </link>
+        <link name='LForeArm'>
+          <pose>4.42758 2.30471 0.344049 -1.9722 1.43578 -1.66032</pose>
+          <velocity>-5e-06 -1.8e-05 -4e-06 3e-06 0.00072 0.007725</velocity>
+          <acceleration>-0.008788 0.000112 -0.009112 0.00217 -0.209024 0.011328</acceleration>
+          <wrench>-0.000682 9e-06 -0.000707 0 -0 0</wrench>
+        </link>
+        <link name='LHip'>
+          <pose>4.43001 2.2524 0.264998 -0.05521 -0.420793 0.464058</pose>
+          <velocity>1.7e-05 -2e-06 -1e-06 0.000405 -0.000756 0.000873</velocity>
+          <acceleration>0.05481 -0.001265 -0.008266 -0.178499 -0.521426 -0.280782</acceleration>
+          <wrench>0.007154 -0.000165 -0.001079 0 -0 0</wrench>
+        </link>
+        <link name='LPelvis'>
+          <pose>4.43001 2.2524 0.264998 -0.100859 -0.420812 0.464057</pose>
+          <velocity>1.8e-05 -2e-06 -1e-06 1.4e-05 -0.000942 0.000707</velocity>
+          <acceleration>0.039533 -0.002248 -0.008517 -0.120617 -0.634105 -0.107474</acceleration>
+          <wrench>0.00276 -0.000157 -0.000595 0 -0 0</wrench>
+        </link>
+        <link name='LShoulder'>
+          <pose>4.43001 2.3004 0.45 -3.14159 1.54791 -3.14159</pose>
+          <velocity>-8e-06 0 -3e-06 -1e-05 -4.2e-05 3.3e-05</velocity>
+          <acceleration>-0.023871 0.000803 -0.008317 -0.009227 -0.151086 0.108829</acceleration>
+          <wrench>-0.001791 6e-05 -0.000624 0 -0 0</wrench>
+        </link>
+        <link name='LSole'>
+          <pose>4.43535 2.24362 0.06236 0.026361 0.202375 0.431126</pose>
+          <velocity>2e-05 1.6e-05 -5e-06 0.000646 0.000686 0.00042</velocity>
+          <acceleration>0.017628 0.008788 -0.008843 0.187789 0.070863 -0.667897</acceleration>
+          <wrench>0.002853 0.001422 -0.001431 0 -0 0</wrench>
+        </link>
+        <link name='LThigh'>
+          <pose>4.43001 2.2524 0.264998 -0.050392 -0.010128 0.441997</pose>
+          <velocity>1.6e-05 -2e-06 -1e-06 1e-05 0.000113 0.00083</velocity>
+          <acceleration>0.029224 -0.006572 -0.003847 -0.030979 0.390119 -0.111094</acceleration>
+          <wrench>0.011388 -0.002561 -0.001499 0 -0 0</wrench>
+        </link>
+        <link name='LTibia'>
+          <pose>4.43308 2.24828 0.16513 -0.050389 -0.000596 0.441515</pose>
+          <velocity>8e-06 2e-06 -2e-06 5.4e-05 1.9e-05 0.000834</velocity>
+          <acceleration>0.001274 -0.004878 -0.004588 0.068005 0.17816 -0.099134</acceleration>
+          <wrench>0.000371 -0.001422 -0.001337 0 -0 0</wrench>
+        </link>
+        <link name='LWrist'>
+          <pose>4.42691 2.29721 0.288609 -2.29625 1.43578 -1.66032</pose>
+          <velocity>1.3e-05 -2.3e-05 -4e-06 8.8e-05 0.001671 0.014729</velocity>
+          <acceleration>0.003282 -0.000132 -0.008548 -0.010913 -0.186747 0.098183</acceleration>
+          <wrench>0.000608 -2.4e-05 -0.001584 0 -0 0</wrench>
+        </link>
+        <link name='Neck'>
+          <pose>4.43001 2.2024 0.476499 -1e-06 -8.2e-05 -0.008836</pose>
+          <velocity>1.2e-05 -3e-06 0.000174 0.000645 0.020831 -0.000394</velocity>
+          <acceleration>-1.61855 0.036762 0.493083 1.70892 0.638221 0.130283</acceleration>
+          <wrench>-0.104267 0.002368 0.031764 0 -0 0</wrench>
+        </link>
+        <link name='RAnkle'>
+          <pose>4.43533 2.16119 0.06236 0.051426 0.201782 -0.429705</pose>
+          <velocity>1e-05 -8e-06 -2e-06 0.000111 0.000349 -0.000803</velocity>
+          <acceleration>-0.010022 0.003281 -0.004563 -0.132083 0.031323 0.115169</acceleration>
+          <wrench>-0.001345 0.00044 -0.000612 0 -0 0</wrench>
+        </link>
+        <link name='RBicep'>
+          <pose>4.43001 2.1044 0.45 1.79334 1.46695 1.79218</pose>
+          <velocity>-7e-06 0 -3e-06 0.000172 -3.7e-05 -3e-05</velocity>
+          <acceleration>-0.021306 -8e-06 -0.007601 0.009639 -0.177904 -0.433343</acceleration>
+          <wrench>-0.003361 -1e-06 -0.001199 0 -0 0</wrench>
+        </link>
+        <link name='RElbow'>
+          <pose>4.42758 2.1001 0.344049 2.10098 1.46695 1.79218</pose>
+          <velocity>-5e-06 1.8e-05 -4e-06 -3e-06 0.000742 -0.007671</velocity>
+          <acceleration>-0.018421 0.00018 -0.008186 -0.00092 -0.119317 -0.03553</acceleration>
+          <wrench>-0.001194 1.2e-05 -0.000531 0 -0 0</wrench>
+        </link>
+        <link name='RForeArm'>
+          <pose>4.42758 2.1001 0.344049 1.97051 1.43568 1.66079</pose>
+          <velocity>-4e-06 1.8e-05 -4e-06 -4e-06 0.000727 -0.007668</velocity>
+          <acceleration>-0.009651 0.000201 -0.008457 -0.003442 -0.174165 -0.002586</acceleration>
+          <wrench>-0.000749 1.6e-05 -0.000656 0 -0 0</wrench>
+        </link>
+        <link name='RHip'>
+          <pose>4.43001 2.1524 0.264998 0.055175 -0.419653 -0.462525</pose>
+          <velocity>1.5e-05 1e-06 -1e-06 -0.000385 -0.000735 -0.000864</velocity>
+          <acceleration>0.051325 -0.000399 -0.008732 0.175378 -0.502816 0.252283</acceleration>
+          <wrench>0.006699 -5.2e-05 -0.00114 0 -0 0</wrench>
+        </link>
+        <link name='RPelvis'>
+          <pose>4.43001 2.1524 0.264998 0.100236 -0.419671 -0.462526</pose>
+          <velocity>1.6e-05 1e-06 -1e-06 -1.7e-05 -0.000912 -0.000705</velocity>
+          <acceleration>0.036835 0.000989 -0.009003 0.086122 -0.588388 0.082552</acceleration>
+          <wrench>0.002571 6.9e-05 -0.000628 0 -0 0</wrench>
+        </link>
+        <link name='RShoulder'>
+          <pose>4.43001 2.1044 0.45 -3.14159 1.54791 -3.14159</pose>
+          <velocity>-6e-06 0 -3e-06 -1e-06 -2.9e-05 -5e-06</velocity>
+          <acceleration>-0.019977 0.000295 -0.00755 -0.004686 -0.109357 -0.019111</acceleration>
+          <wrench>-0.001499 2.2e-05 -0.000567 0 -0 0</wrench>
+        </link>
+        <link name='RSole'>
+          <pose>4.43533 2.16119 0.06236 -0.025301 0.201782 -0.429698</pose>
+          <velocity>2e-05 -1.5e-05 -6e-06 -0.000634 0.000653 -0.000396</velocity>
+          <acceleration>0.019657 -0.009012 -0.009812 -0.201107 0.070533 0.70302</acceleration>
+          <wrench>0.003181 -0.001459 -0.001588 0 -0 0</wrench>
+        </link>
+        <link name='RThigh'>
+          <pose>4.43001 2.1524 0.264998 0.050385 -0.010093 -0.440534</pose>
+          <velocity>1.5e-05 1e-06 -2e-06 -3e-06 0.000107 -0.000822</velocity>
+          <acceleration>0.027047 0.004992 -0.0045 0.042695 0.366641 0.091355</acceleration>
+          <wrench>0.01054 0.001945 -0.001754 0 -0 0</wrench>
+        </link>
+        <link name='RTibia'>
+          <pose>4.43307 2.15652 0.16513 0.050382 -0.00053 -0.440051</pose>
+          <velocity>8e-06 -2e-06 -2e-06 -4.3e-05 2e-05 -0.000826</velocity>
+          <acceleration>0.000484 0.004815 -0.005217 -0.04651 0.174994 0.077641</acceleration>
+          <wrench>0.000141 0.001403 -0.00152 0 -0 0</wrench>
+        </link>
+        <link name='RWrist'>
+          <pose>4.42691 2.1076 0.288609 2.29507 1.43568 1.66079</pose>
+          <velocity>1.3e-05 2.3e-05 -4e-06 -9.1e-05 0.001667 -0.014704</velocity>
+          <acceleration>0.00376 3e-05 -0.007967 0.008833 -0.20267 -0.244798</acceleration>
+          <wrench>0.000697 6e-06 -0.001477 0 -0 0</wrench>
+        </link>
+        <link name='Torso'>
+          <pose>4.43001 2.2024 0.35 0 -0 0</pose>
+          <velocity>4e-06 -0 -3e-06 -2e-06 -9.6e-05 0</velocity>
+          <acceleration>-0.001908 0.000119 -0.008948 -0.004599 -0.300576 0.000494</acceleration>
+          <wrench>-0.002003 0.000125 -0.009391 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='number1'>
+        <pose>3.14801 1.63867 0.4 0 -0 0.612734</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>3.14801 1.63867 0.4 0 -0 0.612734</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='rc_cessna'>
+        <pose>3.618 2.22191 0.148918 6e-06 0.029381 0.030188</pose>
+        <scale>1 1 1</scale>
+        <link name='CenterWheel'>
+          <pose>3.74936 2.22588 0.025 1.5e-05 0.588765 0.0302</pose>
+          <velocity>-0.000166 0.000238 0.000214 -0.009125 -0.006678 -0.001586</velocity>
+          <acceleration>0.035439 0.449193 0.513321 2.9598 0.317054 1.07434</acceleration>
+          <wrench>0.001772 0.02246 0.025666 0 -0 0</wrench>
+        </link>
+        <link name='LeftWheel'>
+          <pose>3.57558 2.35069 0.03 -4e-05 -0.395791 0.030213</pose>
+          <velocity>-0.000242 0.000326 0.00075 -0.010621 -0.007258 0.004306</velocity>
+          <acceleration>0.144378 0.572482 1.6031 -1.88646 0.945948 1.60073</acceleration>
+          <wrench>0.007219 0.028624 0.080155 0 -0 0</wrench>
+        </link>
+        <link name='RightWheel'>
+          <pose>3.58343 2.09081 0.029999 2.2e-05 0.020529 0.03019</pose>
+          <velocity>-0.000211 0.000228 -0.000966 -0.00252 -0.002401 -5.5e-05</velocity>
+          <acceleration>-0.001669 0.300751 -2.80735 -1.33516 -1.27175 2.00248</acceleration>
+          <wrench>-8.3e-05 0.015038 -0.140367 0 -0 0</wrench>
+        </link>
+        <link name='airspeed'>
+          <pose>3.618 2.22191 0.148918 6e-06 0.029381 0.030188</pose>
+          <velocity>-0.000505 0.000267 -3.3e-05 0.001461 -0.00228 0.000394</velocity>
+          <acceleration>0.027339 -0.023364 -0.241425 0.889646 -0.301004 -0.01827</acceleration>
+          <wrench>0.00041 -0.00035 -0.003621 0 -0 0</wrench>
+        </link>
+        <link name='base_link'>
+          <pose>3.618 2.22191 0.148918 6e-06 0.029381 0.030188</pose>
+          <velocity>-0.000505 0.000269 -3.3e-05 0.00145 -0.002281 0.000395</velocity>
+          <acceleration>0.027434 -0.020094 -0.241517 0.874411 -0.366582 0.053524</acceleration>
+          <wrench>0.041151 -0.030142 -0.362276 0 -0 0</wrench>
+        </link>
+        <link name='elevator'>
+          <pose>3.618 2.22191 0.148962 6e-06 0.029291 0.030188</pose>
+          <velocity>-0.000505 0.000267 -4e-05 0.001461 -0.002267 0.000394</velocity>
+          <acceleration>0.022636 -0.11971 -0.500028 0.889521 -0.296759 -0.018377</acceleration>
+          <wrench>0 -0 -0 0 -0 0</wrench>
+        </link>
+        <link name='left_elevon'>
+          <pose>3.61801 2.22191 0.148924 6e-06 0.029292 0.030188</pose>
+          <velocity>-0.000505 0.000264 -3e-05 0.001461 -0.002267 0.000394</velocity>
+          <acceleration>0.029903 -0.029124 1.91104 0.88951 -0.296759 -0.018379</acceleration>
+          <wrench>0 -0 0 0 -0 0</wrench>
+        </link>
+        <link name='left_flap'>
+          <pose>3.61801 2.22191 0.148924 6e-06 0.029292 0.030188</pose>
+          <velocity>-0.000505 0.000264 -3.2e-05 0.001461 -0.002267 0.000394</velocity>
+          <acceleration>0.026979 -0.029202 0.833406 0.889515 -0.296759 -0.018379</acceleration>
+          <wrench>0 -0 0 0 -0 0</wrench>
+        </link>
+        <link name='right_elevon'>
+          <pose>3.61801 2.22191 0.148924 6e-06 0.029292 0.030188</pose>
+          <velocity>-0.000506 0.000264 -3.8e-05 0.001461 -0.002267 0.000394</velocity>
+          <acceleration>0.018206 -0.029437 -2.39949 0.88951 -0.296758 -0.018378</acceleration>
+          <wrench>0 -0 -0 0 -0 0</wrench>
+        </link>
+        <link name='right_flap'>
+          <pose>3.61801 2.22191 0.148924 6e-06 0.029292 0.030188</pose>
+          <velocity>-0.000505 0.000264 -3.6e-05 0.001461 -0.002267 0.000394</velocity>
+          <acceleration>0.02113 -0.029358 -1.32186 0.889516 -0.296759 -0.018379</acceleration>
+          <wrench>0 -0 -0 0 -0 0</wrench>
+        </link>
+        <link name='rotor_puller'>
+          <pose>3.8378 2.22855 0.142455 -2.75166 1.53902 -2.72129</pose>
+          <velocity>-0.000492 0.000363 0.000478 -3e-05 -0.002325 0.000437</velocity>
+          <acceleration>0.029404 0.018858 -0.127625 1.03383 -0.054096 -1.86274</acceleration>
+          <wrench>0.000147 9.4e-05 -0.000638 0 -0 0</wrench>
+        </link>
+        <link name='rudder'>
+          <pose>3.618 2.22191 0.148918 6e-06 0.02938 0.030179</pose>
+          <velocity>-0.000505 0.000275 -3.3e-05 0.001412 -0.002285 0.000399</velocity>
+          <acceleration>0.011073 -0.46011 -0.475113 0.795233 -0.254624 -0.014478</acceleration>
+          <wrench>0 -0 -0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='wood_cube_10cm'>
+        <pose>4.57289 1.27836 0.100665 -0.258802 -3e-06 -1.5e-05</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>4.57289 1.29116 0.149 -0.258802 -3e-06 -1.5e-05</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0.000194 -1.8e-05 8e-06 0.000231 -0.001206 -0.005022</acceleration>
+          <wrench>-0.0001 -9e-06 4e-06 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='wood_cube_10cm_clone'>
+        <pose>4.57132 1.23871 -0.001025 -0.000239 2e-06 6e-06</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>4.57132 1.23872 0.048975 -0.000239 2e-06 6e-06</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-8.1e-05 4e-06 2e-06 -0.000137 -0.001842 -3.2e-05</acceleration>
+          <wrench>-4.2e-05 2e-06 1e-06 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='wood_cube_10cm_clone_0'>
+        <pose>4.53901 1.10562 -0.001013 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>4.53901 1.10562 0.048987 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0 -0 0 0 -0 0</acceleration>
+          <wrench>-0 -0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='wood_cube_10cm_clone_1'>
+        <pose>4.45876 1.24403 -0.001025 -1e-06 3e-06 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>4.45876 1.24403 0.048975 -1e-06 3e-06 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0 -0 -0 0 -0 0</acceleration>
+          <wrench>-0 -0 -0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='wood_cube_10cm_clone_10'>
+        <pose>4.56298 1.40157 0.097966 7.2e-05 -9.2e-05 3.4e-05</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>4.56298 1.40156 0.147966 7.2e-05 -9.2e-05 3.4e-05</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0.000185 5e-06 2e-05 -4.5e-05 -0.000231 -0.000494</acceleration>
+          <wrench>9.6e-05 3e-06 1.1e-05 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='wood_cube_10cm_clone_11'>
+        <pose>4.68262 1.31611 0.048987 -1.5708 -0 -0.004387</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>4.68284 1.36611 0.048987 -1.5708 -0 -0.004387</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 -0 0 0 -0 0</acceleration>
+          <wrench>0 -0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='wood_cube_10cm_clone_2'>
+        <pose>4.68596 1.25234 -0.001013 0 -0 0.00018</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>4.68596 1.25234 0.048987 0 -0 0.00018</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 -0 -0 0 -0 0</acceleration>
+          <wrench>0 -0 -0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='wood_cube_10cm_clone_3'>
+        <pose>4.57936 1.41548 -0.001025 6e-05 -7.7e-05 1.2e-05</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>4.57935 1.41548 0.048975 6e-05 -7.7e-05 1.2e-05</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>9.9e-05 -2e-06 -1.9e-05 7.9e-05 0.002006 -1.1e-05</acceleration>
+          <wrench>5.1e-05 -1e-06 -1e-05 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='wood_cube_10cm_clone_4'>
+        <pose>5.98751 7.27159 0.048987 -2.84047 -1.57079 3.14159</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>5.93976 7.25676 0.048987 -2.84047 -1.57079 3.14159</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 -0 -0 0 -0 0</acceleration>
+          <wrench>0 -0 -0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='wood_cube_10cm_clone_5'>
+        <pose>3.94435 3.53054 0.048987 -0.076423 -1.57079 3.14159</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>3.9942 3.52672 0.048987 -0.076423 -1.57079 3.14159</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 -0 -0 0 -0 0</acceleration>
+          <wrench>0 -0 -0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='wood_cube_10cm_clone_6'>
+        <pose>2.36446 3.50159 -0.001013 0 0 -1.06363</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>2.36446 3.50159 0.048987 0 0 -1.06363</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 -0 0 -0 0</acceleration>
+          <wrench>0 0 -0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='wood_cube_10cm_clone_7'>
+        <pose>5.27806 2.26526 0.048987 1.43417 -1.57079 3.14159</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>5.28487 2.3148 0.048987 1.43417 -1.57079 3.14159</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0 0 -0 -0 -0 -0</acceleration>
+          <wrench>-0 0 -0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='wood_cube_10cm_clone_8'>
+        <pose>4.39656 1.04493 -0.001013 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>4.39656 1.04493 0.048987 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>-0 0 0 0 -0 0</acceleration>
+          <wrench>-0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='wood_cube_10cm_clone_9'>
+        <pose>4.45945 1.24422 0.097969 -1e-06 4e-06 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>4.45945 1.24422 0.147969 -1e-06 4e-06 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose>0 0 10 0 -0 0</pose>
+      </light>
+    </state>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>4.51153 5.76373 3.87762 0 0.571641 -1.96298</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+  </world>
+</sdf>
